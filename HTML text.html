@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<!--
+  ╔══════════════════════════════════════════════════════╗
+  ║           NGDP ADVISORY — CUSTOMIZE ME               ║
+  ╠══════════════════════════════════════════════════════╣
+  ║  EMAIL:         ngdpadvisory@gmail.com  ✓             ║
+  ║  PHONE:         +1 (647) 000-0000  ← update          ║
+  ║  BOOKING LINK:  https://calendly.com/yourlink ← upd  ║
+  ║  LINKEDIN (firm):   /company/ngdp-advisory/  ✓       ║
+  ║  LINKEDIN (Philemon):  /in/phili-ephraim/  ✓         ║
+  ║  LINKEDIN (Gabriella): /in/gabriella-cherepaha/ ✓    ║
+  ║  LINKEDIN (Daksh):     /in/daksh-badwal/  ✓          ║
+  ║  LINKEDIN (Naman):     /in/naman-singh-intern/ ✓     ║
+  ║  PHOTOS: Each team card has an <img> tag with        ║
+  ║    src="YOUR_PHOTO_URL_HERE". Replace with your own   ║
+  ║    exported photo URLs or relative file paths.        ║
+  ║  FORMSPREE: Replace mailto: in form action with       ║
+  ║             https://formspree.io/f/YOUR_FORM_ID       ║
+  ╚══════════════════════════════════════════════════════╝
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NGDP Advisory — Practical Strategy. Measurable Results.</title>
+  <meta name="description" content="NGDP Advisory is a Toronto-based boutique consulting firm. Practical strategy, research-backed analysis, and implementation-oriented recommendations for small and growing businesses — with optional AI-enabled workflows to move faster." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --void:       #000000;
+      --void-soft:  #080c10;
+      --navy-deep:  #0d1520;
+      --navy:       #162032;
+      --navy-mid:   #1e2d42;
+      --slate:      #3d5472;
+      --mist:       #8ea3bc;
+      --mist-light: #b8c9da;
+      --silver:     #d4dde6;
+      --white:      #f4f6f8;
+      --pure:       #ffffff;
+      --f-serif: 'Cormorant Garamond', Georgia, serif;
+      --f-sans:  'Inter', system-ui, sans-serif;
+      --ease: cubic-bezier(0.4,0,0.2,1);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--void);color:var(--mist);font-family:var(--f-sans);font-weight:300;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+    img{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}
+    ul{list-style:none}
+    button,input,textarea{font:inherit;border:none;outline:none;background:none}
+
+    .container{width:100%;max-width:1160px;margin:0 auto;padding:0 1.75rem}
+    .section{padding:5rem 0}
+
+    /* Type */
+    .lbl{font-size:.68rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--mist)}
+    .display{font-family:var(--f-serif);font-size:clamp(3rem,6vw,5.5rem);font-weight:300;line-height:1.05;letter-spacing:-.01em;color:var(--white)}
+    .display em{font-style:italic;color:var(--mist-light)}
+    .heading{font-family:var(--f-serif);font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.15;color:var(--white)}
+    .heading em{font-style:italic;color:var(--mist-light)}
+    .subhead{font-family:var(--f-serif);font-size:clamp(1.3rem,2vw,1.65rem);font-weight:300;line-height:1.28;color:var(--white)}
+    .body{font-size:.9rem;line-height:1.75;color:var(--mist)}
+
+    .hr{width:28px;height:1px;background:var(--slate);display:block}
+    .hr-full{width:100%;height:1px;background:rgba(255,255,255,.07)}
+
+    /* Buttons */
+    .btn{display:inline-flex;align-items:center;gap:.45rem;padding:.7rem 1.5rem;font-size:.78rem;font-weight:400;letter-spacing:.06em;border-radius:3px;cursor:pointer;transition:all .18s var(--ease)}
+    .btn:focus-visible{outline:1px solid var(--mist);outline-offset:3px}
+    .btn-w{background:var(--pure);color:var(--void);font-weight:500}
+    .btn-w:hover{background:var(--silver);transform:translateY(-1px)}
+    .btn-g{border:1px solid rgba(255,255,255,.18);color:var(--silver)}
+    .btn-g:hover{border-color:rgba(255,255,255,.45);color:var(--white)}
+
+    /* Reveal */
+    .rv{opacity:0;transform:translateY(18px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+    .rv.in{opacity:1;transform:none}
+    .d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}.d4{transition-delay:.28s}
+
+    /* ── NAV ── */
+    .nav{position:sticky;top:0;z-index:200;background:rgba(0,0,0,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav__in{display:flex;align-items:center;justify-content:space-between;height:62px}
+    .nav__logo{display:flex;align-items:center;gap:.7rem}
+    .nav__mark{width:30px;height:30px;background:var(--pure);border-radius:3px;display:flex;align-items:center;justify-content:center}
+    .nav__mark span{font-family:var(--f-sans);font-size:.5rem;font-weight:600;color:var(--void);letter-spacing:.04em}
+    .nav__name{font-size:.82rem;font-weight:300;letter-spacing:.1em;color:var(--white)}
+    .nav__name em{font-style:normal;color:var(--mist)}
+    .nav__links{display:flex;align-items:center;gap:2rem}
+    .nav__links a{font-size:.76rem;font-weight:300;letter-spacing:.07em;color:var(--mist);transition:color .18s}
+    .nav__links a:hover{color:var(--white)}
+    .nav__cta{margin-left:1rem}
+    .nav__ham{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:4px}
+    .nav__ham span{display:block;width:20px;height:1.5px;background:var(--mist);border-radius:2px;transition:all .18s}
+    .nav__mob{display:none;flex-direction:column;padding:1rem 1.75rem;border-top:1px solid rgba(255,255,255,.06);gap:.75rem;background:rgba(0,0,0,.96)}
+    .nav__mob.open{display:flex}
+    .nav__mob a{font-size:.9rem;font-weight:300;color:var(--mist);padding:.3rem 0;letter-spacing:.04em}
+    .nav__mob a:hover{color:var(--white)}
+
+    /* ── HERO ── */
+    .hero{position:relative;min-height:92vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;padding-bottom:5rem}
+    .hero__bg{position:absolute;inset:0;background:radial-gradient(ellipse 100% 100% at 0% 60%,#192a42 0%,transparent 55%),radial-gradient(ellipse 60% 70% at 85% 15%,#213150 0%,transparent 50%),radial-gradient(ellipse 80% 80% at 50% 50%,#0d1820 0%,transparent 70%),#060c12;z-index:0}
+    .hero__bg::after{content:'';position:absolute;inset:0;opacity:.55;mix-blend-mode:overlay;pointer-events:none;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E");
+      background-size:200px}
+    .hero__wm{position:absolute;right:5%;top:50%;transform:translateY(-50%);font-family:var(--f-serif);font-style:italic;font-weight:300;font-size:clamp(1.1rem,2.2vw,1.6rem);color:rgba(200,218,235,.55);letter-spacing:.02em;white-space:nowrap;pointer-events:none;z-index:1;text-shadow:0 1px 20px rgba(0,0,0,.4)}
+    .hero__content{position:relative;z-index:2;max-width:760px}
+    .hero__eye{display:flex;align-items:center;gap:.7rem;margin-bottom:1.75rem}
+    .hero__dot{width:5px;height:5px;border-radius:50%;background:var(--mist)}
+    .hero h1{margin-bottom:1.75rem}
+    .hero__sub{max-width:500px;margin-bottom:3rem;font-size:.92rem;line-height:1.8;color:var(--mist)}
+    .hero__btns{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:1rem}
+    .hero__trust{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--slate)}
+    .hero__scroll{position:absolute;bottom:1.75rem;left:1.75rem;z-index:2;display:flex;align-items:center;gap:.5rem;font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--slate)}
+    .hero__scroll-line{width:20px;height:1px;background:var(--slate)}
+
+    /* ── SERVICES ── */
+    .services{background:var(--void-soft)}
+    .sh-c{text-align:center;max-width:580px;margin:0 auto 3.5rem}
+    .sh-c .hr{margin:.75rem auto}
+    .sh-l .hr{margin:.75rem 0}
+    .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:rgba(255,255,255,.06);border-radius:12px;overflow:hidden}
+    .svc{background:var(--void-soft);padding:3rem 1.75rem;display:flex;flex-direction:column;transition:background .3s var(--ease);position:relative}
+    .svc::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(142,163,188,.3),transparent);opacity:0;transition:opacity .3s}
+    .svc:hover{background:rgba(20,30,46,.85)}
+    .svc:hover::before{opacity:1}
+    .svc__n{font-family:var(--f-serif);font-size:2.8rem;font-weight:300;color:rgba(255,255,255,.05);line-height:1;margin-bottom:1rem}
+    .svc h3{font-family:var(--f-serif);font-size:1.5rem;font-weight:300;color:var(--white);line-height:1.2;margin-bottom:.35rem}
+    .svc__for{font-size:.68rem;letter-spacing:.09em;text-transform:uppercase;color:var(--mist);margin-bottom:1.5rem}
+    .svc__body{font-size:.875rem;color:var(--mist);line-height:1.75;margin-bottom:1.5rem;flex:1}
+    .svc__dlbl{font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--slate);margin-bottom:.6rem}
+    .svc__del{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.5rem}
+    .svc__del li{font-size:.82rem;color:var(--mist);display:flex;align-items:flex-start;gap:.6rem}
+    .svc__del li::before{content:'—';color:var(--slate);flex-shrink:0;line-height:1.6}
+    .svc__foot{display:flex;align-items:center;justify-content:space-between;padding-top:1rem;border-top:1px solid rgba(255,255,255,.07);margin-top:auto}
+    .svc__pb{font-size:.68rem;font-weight:400;letter-spacing:.06em;background:rgba(142,163,188,.1);color:var(--mist-light);border:1px solid rgba(142,163,188,.2);padding:.18rem .55rem;border-radius:100px}
+    .svc__time{font-size:.68rem;letter-spacing:.06em;color:var(--slate)}
+
+    .svc__addon{font-size:.75rem;color:var(--slate);line-height:1.55;font-style:italic;margin-bottom:1rem;padding-left:.1rem}
+
+    /* ── AI ENABLEMENT SECTION ── */
+    .ai-enable{background:var(--navy-deep)}
+    .ai-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+    .ai-card{background:rgba(255,255,255,.025);border:1px solid rgba(142,163,188,.12);border-radius:12px;padding:2rem 1.75rem;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:background .3s var(--ease),border-color .3s}
+    .ai-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(142,163,188,.4),transparent);opacity:0;transition:opacity .3s}
+    .ai-card:hover{background:rgba(22,35,55,.7);border-color:rgba(142,163,188,.22)}
+    .ai-card:hover::before{opacity:1}
+    .ai-card__n{font-family:var(--f-serif);font-size:2.5rem;font-weight:300;color:rgba(255,255,255,.05);line-height:1;margin-bottom:.75rem}
+    .ai-card h3{font-family:var(--f-serif);font-size:1.45rem;font-weight:300;color:var(--white);line-height:1.2;margin-bottom:.35rem}
+    .ai-card__for{font-size:.68rem;letter-spacing:.09em;text-transform:uppercase;color:var(--mist);margin-bottom:1.25rem}
+    .ai-card__dlbl{font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--slate);margin-bottom:.55rem}
+    .ai-card__del{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.25rem}
+    .ai-card__del li{font-size:.82rem;color:var(--mist);display:flex;align-items:flex-start;gap:.6rem}
+    .ai-card__del li::before{content:'—';color:var(--slate);flex-shrink:0;line-height:1.6}
+    .ai-card__examples{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:6px;padding:.9rem 1rem;margin-bottom:1.25rem}
+    .ai-card__examples-lbl{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin-bottom:.5rem}
+    .ai-card__examples ul{display:flex;flex-direction:column;gap:.35rem}
+    .ai-card__examples li{font-size:.79rem;color:var(--mist);display:flex;align-items:flex-start;gap:.5rem;line-height:1.5}
+    .ai-card__examples li::before{content:'·';color:var(--mist);flex-shrink:0}
+    .ai-card__boundary{font-size:.74rem;color:var(--slate);font-style:italic;margin-bottom:1rem;padding:.6rem .75rem;border-left:1px solid rgba(142,163,188,.2);line-height:1.55}
+    .ai-card__foot{display:flex;align-items:center;justify-content:space-between;padding-top:1rem;border-top:1px solid rgba(255,255,255,.07);margin-top:auto}
+    .ai-card__badge{font-size:.68rem;font-weight:400;letter-spacing:.06em;background:rgba(142,163,188,.08);color:var(--mist-light);border:1px solid rgba(142,163,188,.18);padding:.18rem .55rem;border-radius:100px}
+    .ai-card__time{font-size:.68rem;letter-spacing:.06em;color:var(--slate)}
+    .process{background:var(--navy-deep)}
+    .proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;position:relative}
+    .proc-grid::before{content:'';position:absolute;top:11px;left:12%;right:12%;height:1px;background:rgba(255,255,255,.08);z-index:0}
+    .proc-step{position:relative;z-index:1}
+    .proc-step__n{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin-bottom:.9rem;display:flex;align-items:center;gap:.6rem}
+    .proc-step__n::before{content:'';display:inline-block;width:16px;height:1px;background:var(--slate)}
+    .proc-step h3{font-family:var(--f-serif);font-size:1.3rem;font-weight:300;color:var(--white);margin-bottom:.5rem}
+    .proc-step p{font-size:.84rem;color:var(--mist);line-height:1.7}
+
+    /* ── WHY ── */
+    .why__in{display:grid;grid-template-columns:5fr 7fr;gap:5rem;align-items:start}
+    .why__left .hr{margin:.75rem 0}
+    .why__left p{margin-top:1rem}
+    .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.06);border-radius:12px;overflow:hidden}
+    .wpt{background:var(--void);padding:1.5rem;transition:background .3s}
+    .wpt:hover{background:rgba(20,30,46,.7)}
+    .wpt__ico{width:26px;height:26px;margin-bottom:.75rem;opacity:.45}
+    .wpt__ico svg{width:100%;height:100%;stroke:var(--mist-light)}
+    .wpt h4{font-size:.83rem;font-weight:500;color:var(--white);margin-bottom:.3rem;letter-spacing:.02em}
+    .wpt p{font-size:.78rem;color:var(--mist);line-height:1.6}
+
+    /* ── TEAM ── */
+    .team{background:var(--void-soft)}
+    .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1.25rem}
+    .tc{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:1.5rem;transition:background .3s,border-color .3s}
+    .tc:hover{background:rgba(20,30,46,.7);border-color:rgba(255,255,255,.12)}
+    .tc__avatar{width:56px;height:56px;border-radius:50%;overflow:hidden;margin-bottom:1rem;position:relative;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04)}
+    .tc__photo{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+    .tc__mono{width:100%;height:100%;border-radius:50%;display:none;align-items:center;justify-content:center;font-family:var(--f-serif);font-size:1rem;font-weight:300;color:var(--mist-light);position:absolute;inset:0}
+    .tc h3{font-family:var(--f-serif);font-size:1.1rem;font-weight:300;color:var(--white);margin-bottom:.2rem;line-height:1.2}
+    .tc__role{font-size:.67rem;letter-spacing:.09em;text-transform:uppercase;color:var(--mist);margin-bottom:.85rem;line-height:1.7}
+    .tc__str{font-size:.81rem;color:var(--mist);line-height:1.6;margin-bottom:.85rem}
+    .tc__li a{display:inline-flex;align-items:center;gap:.3rem;font-size:.7rem;letter-spacing:.07em;color:var(--slate);transition:color .18s}
+    .tc__li a:hover{color:var(--mist-light)}
+    .tc__li svg{width:11px;height:11px}
+    .team-shared{background:rgba(22,32,50,.5);border:1px solid rgba(142,163,188,.1);border-radius:12px;padding:1.75rem 3rem;text-align:center}
+    .team-shared__lbl{font-size:.63rem;letter-spacing:.17em;text-transform:uppercase;color:var(--mist);margin-bottom:.6rem}
+    .team-shared p{font-size:.875rem;color:var(--mist);max-width:660px;margin:0 auto;line-height:1.75}
+    .team-shared strong{color:var(--mist-light);font-weight:400}
+
+    /* ── PROOF ── */
+    .proof{background:var(--navy-deep)}
+    .proof-note{background:rgba(142,163,188,.05);border:1px solid rgba(142,163,188,.1);border-left:2px solid var(--mist);padding:.85rem 1.5rem;border-radius:0 8px 8px 0;font-size:.84rem;color:var(--mist);max-width:580px;margin-bottom:2rem}
+    .proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:860px}
+    .cc{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:1.5rem;position:relative;overflow:hidden}
+    .cc__rule{position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--slate),transparent)}
+    .cc__badge{display:inline-block;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--slate);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:.18rem .5rem;border-radius:2px;margin-bottom:1rem}
+    .cc h3{font-family:var(--f-serif);font-size:1.2rem;font-weight:300;color:var(--white);margin-bottom:.4rem}
+    .cc p{font-size:.84rem;color:var(--mist);line-height:1.65}
+    .cc__bw{margin-top:1rem;border-radius:4px;overflow:hidden;position:relative}
+    .cc__bt{font-size:.79rem;color:var(--mist);line-height:1.6;padding:.65rem;background:rgba(255,255,255,.03);filter:blur(5px);user-select:none}
+    .cc__bl{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mist);background:rgba(10,16,25,.5)}
+
+    /* ── FAQ ── */
+    .faq__in{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start}
+    .faq__left .hr{margin:.75rem 0}
+    .faq-list{border-top:1px solid rgba(255,255,255,.07)}
+    .fi{border-bottom:1px solid rgba(255,255,255,.07)}
+    .fi__q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.05rem 0;font-size:.87rem;font-weight:400;color:var(--silver);cursor:pointer;text-align:left;transition:color .18s;letter-spacing:.01em}
+    .fi__q:hover{color:var(--white)}
+    .fi__q:focus-visible{outline:1px solid var(--mist);outline-offset:2px}
+    .fi__ico{width:15px;height:15px;stroke:var(--slate);flex-shrink:0;transition:transform .18s,stroke .18s}
+    .fi.open .fi__ico{transform:rotate(45deg);stroke:var(--mist)}
+    .fi__a{max-height:0;overflow:hidden;transition:max-height .38s var(--ease),padding .38s var(--ease)}
+    .fi.open .fi__a{max-height:400px;padding-bottom:1.05rem}
+    .fi__a p{font-size:.875rem;color:var(--mist);line-height:1.75}
+
+    /* ── CONTACT ── */
+    .contact{background:var(--void-soft)}
+    .contact__in{display:grid;grid-template-columns:1fr 1.1fr;gap:5rem;align-items:start}
+    .contact__left .hr{margin:.75rem 0 1.75rem}
+    .contact__left p{margin-bottom:1.75rem}
+    .contact-info{display:flex;flex-direction:column;gap:.75rem;margin-bottom:1.75rem}
+    .ci{display:flex;align-items:center;gap:.6rem;font-size:.84rem;color:var(--mist)}
+    .ci svg{width:13px;height:13px;stroke:var(--slate);flex-shrink:0}
+    .ci a{transition:color .18s}.ci a:hover{color:var(--white)}
+    .contact__btns{display:flex;flex-wrap:wrap;gap:.75rem}
+    .cform{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:2.5rem 1.75rem}
+    .cform__title{font-family:var(--f-serif);font-size:1.3rem;font-weight:300;color:var(--white);margin-bottom:1.75rem}
+    .fg{display:flex;flex-direction:column;gap:.3rem;margin-bottom:.9rem}
+    .fg label{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--slate)}
+    .fg input,.fg textarea{width:100%;padding:.62rem .85rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:3px;font-size:.875rem;color:var(--white);transition:border-color .18s,background .18s}
+    .fg input::placeholder,.fg textarea::placeholder{color:var(--slate)}
+    .fg input:focus,.fg textarea:focus{border-color:rgba(142,163,188,.4);background:rgba(255,255,255,.06);outline:none}
+    .fg textarea{resize:vertical;min-height:110px}
+    .frow{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .fsub{width:100%;justify-content:center;margin-top:1rem}
+
+    /* ── FOOTER ── */
+    .footer{border-top:1px solid rgba(255,255,255,.06);padding:1.5rem 0}
+    .footer__in{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+    .flogo{display:flex;align-items:center;gap:.6rem}
+    .fmark{width:24px;height:24px;background:var(--pure);border-radius:3px;display:flex;align-items:center;justify-content:center}
+    .fmark span{font-size:.38rem;font-weight:600;color:var(--void);letter-spacing:.04em}
+    .fname{font-size:.75rem;letter-spacing:.1em;color:var(--mist)}
+    .fcopy{font-size:.7rem;color:var(--slate)}
+    .fright{display:flex;align-items:center;gap:1.5rem}
+    .floc{font-size:.7rem;color:var(--slate);letter-spacing:.07em}
+    .fli a{display:inline-flex;align-items:center;gap:.3rem;font-size:.7rem;color:var(--slate);letter-spacing:.06em;transition:color .18s}
+    .fli a:hover{color:var(--mist-light)}
+    .fli svg{width:11px;height:11px}
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:960px){
+      .nav__links,.nav__cta{display:none}
+      .nav__ham{display:flex}
+      .svc-grid{grid-template-columns:1fr}
+      .svc{padding:2rem 1.5rem}
+      .ai-grid{grid-template-columns:1fr}
+      .proc-grid{grid-template-columns:1fr 1fr}
+      .proc-grid::before{display:none}
+      .why__in{grid-template-columns:1fr}
+      .team-grid{grid-template-columns:1fr 1fr}
+      .proof-grid{grid-template-columns:1fr;max-width:520px}
+      .faq__in{grid-template-columns:1fr}
+      .contact__in{grid-template-columns:1fr}
+      .frow{grid-template-columns:1fr}
+    }
+    @media(max-width:600px){
+      .section{padding:3.5rem 0}
+      .hero{min-height:80vh;padding-bottom:3.5rem}
+      .hero__wm{display:none}
+      .display{font-size:clamp(2.6rem,9vw,3.5rem)}
+      .proc-grid{grid-template-columns:1fr}
+      .why-grid{grid-template-columns:1fr}
+      .team-grid{grid-template-columns:1fr}
+      .team-shared{padding:1.5rem 1rem}
+      .hero__btns{flex-direction:column;align-items:flex-start}
+      .footer__in{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav__in">
+      <a href="#" class="nav__logo" aria-label="NGDP Advisory home">
+        <div class="nav__mark" aria-hidden="true"><span>NGDP</span></div>
+        <span class="nav__name">NGDP <em>Advisory</em></span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#ai">AI Enablement</a></li>
+        <li><a href="#process">How We Work</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-w nav__cta">Book a call</a>
+      <button class="nav__ham" id="ham" aria-label="Open menu" aria-expanded="false" aria-controls="mob">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav__mob" id="mob" role="menu">
+    <a href="#services" role="menuitem">Services</a>
+    <a href="#ai" role="menuitem">AI Enablement</a>
+    <a href="#process" role="menuitem">How We Work</a>
+    <a href="#team" role="menuitem">Team</a>
+    <a href="#contact" role="menuitem">Contact</a>
+    <a href="#contact" class="btn btn-w" style="width:fit-content;margin-top:.5rem">Book a call</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero" aria-label="Introduction">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="hero__wm" aria-hidden="true">Practical Strategy, Measurable Results</div>
+  <div class="container">
+    <div class="hero__content">
+      <div class="hero__eye rv">
+        <span class="hero__dot" aria-hidden="true"></span>
+        <span class="lbl">Boutique Consulting · Toronto, ON</span>
+      </div>
+      <h1 class="display rv d1">
+        Strategy that works<br>on paper <em>and</em><br>in practice.
+      </h1>
+      <p class="hero__sub rv d2">We help small and growing businesses get clear on what matters, then give you a concrete plan to act on it. Research-backed, implementation-oriented, and written in plain English — with optional AI-enabled implementation to move faster.</p>
+      <div class="hero__btns rv d3">
+        <a href="https://calendly.com/yourlink" target="_blank" rel="noopener" class="btn btn-w">Book a 15-min intro call</a>
+        <a href="/cdn-cgi/l/email-protection#741c1118181b341a1310041510021d071b060d5a171b19" class="btn btn-g">Email us</a>
+      </div>
+      <p class="hero__trust rv d4">Founder-led · Student-run · Toronto-based</p>
+    </div>
+  </div>
+  <div class="hero__scroll" aria-hidden="true">
+    <span class="hero__scroll-line"></span>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services" id="services" aria-label="Services">
+  <div class="container">
+    <div class="sh-c rv">
+      <span class="lbl">Services</span>
+      <div class="hr"></div>
+      <h2 class="heading" style="margin-top:.75rem">Fixed-scope engagements.<br><em>Clear deliverables.</em></h2>
+      <p class="body" style="margin-top:.75rem">Every engagement is scoped upfront. You know exactly what you're getting before any work begins.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc rv d1">
+        <div class="svc__n" aria-hidden="true">01</div>
+        <h3>10-Day Business Diagnostic</h3>
+        <p class="svc__for">For early-stage founders &amp; established SMEs needing clarity</p>
+        <p class="svc__body">A structured deep-dive into your operations, financials, and strategy. We identify what's working, what isn't, and your highest-leverage opportunities — delivered as a clear, actionable report.</p>
+        <div class="hr-full" style="margin-bottom:1.5rem"></div>
+        <div class="svc__dlbl">Deliverables</div>
+        <ul class="svc__del">
+          <li>Written findings + diagnosis report</li>
+          <li>Priority action roadmap (top 3–5 moves)</li>
+          <li>Supporting data exhibits</li>
+          <li>60-min walkthrough call</li>
+        </ul>
+        <p class="svc__addon">Optional add-on: AI-enabled workflow automation and reporting to speed up implementation.</p>
+        <div class="svc__foot">
+          <span class="svc__pb">Pro bono</span>
+          <span class="svc__time">~10 business days</span>
+        </div>
+      </article>
+      <article class="svc rv d2">
+        <div class="svc__n" aria-hidden="true">02</div>
+        <h3>KPI Scorecard &amp; Dashboard Setup</h3>
+        <p class="svc__for">For businesses flying blind on their key numbers</p>
+        <p class="svc__body">We define the metrics that actually matter for your business, build a simple tracking scorecard, and set up a lightweight dashboard you can update yourself going forward.</p>
+        <div class="hr-full" style="margin-bottom:1.5rem"></div>
+        <div class="svc__dlbl">Deliverables</div>
+        <ul class="svc__del">
+          <li>KPI framework (10–15 tailored metrics)</li>
+          <li>Spreadsheet scorecard template</li>
+          <li>Dashboard (Excel or Notion)</li>
+          <li>Setup guide + 30-min walkthrough</li>
+        </ul>
+        <p class="svc__addon">Optional add-on: AI-enabled workflow automation and reporting to speed up implementation.</p>
+        <div class="svc__foot">
+          <span class="svc__pb">Pro bono</span>
+          <span class="svc__time">~7–10 business days</span>
+        </div>
+      </article>
+      <article class="svc rv d3">
+        <div class="svc__n" aria-hidden="true">03</div>
+        <h3>Pricing &amp; Profitability Review</h3>
+        <p class="svc__for">For businesses unsure if they're pricing right</p>
+        <p class="svc__body">A focused review of your pricing structure, margins, and unit economics. We surface where you may be leaving money on the table and provide specific, defensible pricing recommendations.</p>
+        <div class="hr-full" style="margin-bottom:1.5rem"></div>
+        <div class="svc__dlbl">Deliverables</div>
+        <ul class="svc__del">
+          <li>Unit economics analysis</li>
+          <li>Pricing sensitivity review</li>
+          <li>Written recommendations memo</li>
+          <li>Optional: competitive pricing scan</li>
+        </ul>
+        <p class="svc__addon">Optional add-on: AI-enabled workflow automation and reporting to speed up implementation.</p>
+        <div class="svc__foot">
+          <span class="svc__pb">Pro bono</span>
+          <span class="svc__time">~7–14 business days</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- AI ENABLEMENT -->
+<section class="section ai-enable" id="ai" aria-label="AI Enablement">
+  <div class="container">
+    <div class="sh-l rv" style="margin-bottom:3rem">
+      <span class="lbl">AI Enablement</span>
+      <div class="hr"></div>
+      <h2 class="heading" style="margin-top:.75rem">Practical tools.<br><em>Responsibly applied.</em></h2>
+      <p class="body" style="margin-top:.75rem;max-width:560px">These are optional add-ons for clients who want to move faster. We focus on workflow automation and reporting tools — not custom models or IT infrastructure. You stay in control.</p>
+    </div>
+    <div class="ai-grid">
+
+      <!-- Card A -->
+      <article class="ai-card rv d1">
+        <div class="ai-card__n" aria-hidden="true">A</div>
+        <h3>AI Opportunity &amp; Readiness Diagnostic</h3>
+        <p class="ai-card__for">For small businesses wanting quick wins, not big rebuilds</p>
+        <div class="ai-card__dlbl">Deliverables</div>
+        <ul class="ai-card__del">
+          <li>Top 5 AI use cases ranked by ROI and implementation effort</li>
+          <li>Current workflow map highlighting automation opportunities</li>
+          <li>Tool stack recommendation (practical, off-the-shelf tools only)</li>
+          <li>30-day pilot plan with clear first steps</li>
+          <li>Plain-English data privacy checklist</li>
+        </ul>
+        <div class="ai-card__boundary">No custom model training — we focus on practical tools and processes your team can actually use and maintain.</div>
+        <div class="ai-card__foot">
+          <span class="ai-card__badge">Pro bono</span>
+          <span class="ai-card__time">~1 week</span>
+        </div>
+      </article>
+
+      <!-- Card B -->
+      <article class="ai-card rv d2">
+        <div class="ai-card__n" aria-hidden="true">B</div>
+        <h3>AI Pilot Sprint</h3>
+        <p class="ai-card__for">For businesses ready to implement one workflow improvement</p>
+        <div class="ai-card__dlbl">Deliverables</div>
+        <ul class="ai-card__del">
+          <li>One working workflow automation, built and tested</li>
+          <li>Standard operating procedure (SOP) for ongoing use</li>
+          <li>Handoff documentation + team training walkthrough</li>
+          <li>Success metrics and a 2-week check-in plan</li>
+        </ul>
+        <div class="ai-card__examples">
+          <div class="ai-card__examples-lbl">Example workflows</div>
+          <ul>
+            <li>Intake form → spreadsheet/CRM → automated follow-up reminders</li>
+            <li>Sales call summaries → structured action item list</li>
+            <li>Weekly KPI narrative report generated from your numbers</li>
+            <li>Internal FAQ / SOP knowledge base from your existing documents</li>
+          </ul>
+        </div>
+        <div class="ai-card__boundary">Fixed scope, capped support. This is not ongoing IT support — we build, document, hand off, and check in once.</div>
+        <div class="ai-card__foot">
+          <span class="ai-card__badge">Pro bono</span>
+          <span class="ai-card__time">~2–3 weeks</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section process" id="process" aria-label="How we work">
+  <div class="container">
+    <div class="sh-l rv" style="margin-bottom:3.5rem">
+      <span class="lbl">How We Work</span>
+      <div class="hr"></div>
+      <h2 class="heading" style="margin-top:.75rem">Simple process.<br><em>No surprises.</em></h2>
+    </div>
+    <div class="proc-grid">
+      <div class="proc-step rv d1">
+        <div class="proc-step__n">01 — Discover</div>
+        <h3>Discover</h3>
+        <p>A 15-minute call to understand your business, goals, and where you're stuck. No hard sell — we'll tell you honestly if we're a fit before anything starts.</p>
+      </div>
+      <div class="proc-step rv d2">
+        <div class="proc-step__n">02 — Diagnose</div>
+        <h3>Diagnose</h3>
+        <p>We gather data, ask the right questions, and analyze your situation rigorously. Quantitative where possible; qualitative where necessary.</p>
+      </div>
+      <div class="proc-step rv d3">
+        <div class="proc-step__n">03 — Recommend</div>
+        <h3>Recommend</h3>
+        <p>A written deliverable with clear findings, reasoning, and prioritized next steps. Practical recommendations built to be acted on, not shelved.</p>
+      </div>
+      <div class="proc-step rv d4">
+        <div class="proc-step__n">04 — Check In</div>
+        <h3>Implement &amp; Check In</h3>
+        <p>Every engagement includes a follow-up after delivery. We want to know if the work is landing — and we'll adjust if needed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="section" id="why" aria-label="Why NGDP Advisory">
+  <div class="container">
+    <div class="why__in">
+      <div class="why__left rv">
+        <span class="lbl">Why NGDP</span>
+        <div class="hr"></div>
+        <h2 class="heading" style="margin-top:.75rem">Built for small business.<br><em>Not big optics.</em></h2>
+        <p class="body" style="margin-top:1rem">We're economics students who care about doing rigorous work and being honest with clients. We won't oversell scope, pad timelines, or hand you a 60-slide deck when a 5-page memo would do better.</p>
+      </div>
+      <div class="why-grid rv d1">
+        <div class="wpt">
+          <div class="wpt__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
+          <h4>Econ-trained analysis</h4>
+          <p>Grounded in empirical methods, quantitative reasoning, and honest data interpretation.</p>
+        </div>
+        <div class="wpt">
+          <div class="wpt__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+          <h4>Fast, focused sprints</h4>
+          <p>Short engagements mean faster results and less drag on your time and budget.</p>
+        </div>
+        <div class="wpt">
+          <div class="wpt__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+          <h4>Founder-led, every time</h4>
+          <p>You work directly with the co-founders. No junior handoffs, no communication layers.</p>
+        </div>
+        <div class="wpt">
+          <div class="wpt__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></div>
+          <h4>Plain-English deliverables</h4>
+          <p>Reports written to be read, not filed. Findings you can share with your team immediately.</p>
+        </div>
+        <div class="wpt">
+          <div class="wpt__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg></div>
+          <h4>Implementation focus</h4>
+          <p>Recommendations built for action — specific, sequenced, and feasible within your constraints.</p>
+        </div>
+        <div class="wpt">
+          <div class="wpt__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+          <h4>Ethical &amp; transparent</h4>
+          <p>Fixed-scope engagements, honest timelines, no hidden fees. We'll tell you if something's outside our lane.</p>
+        </div>
+        <div class="wpt">
+          <div class="wpt__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><polyline points="8 21 12 17 16 21"></polyline></svg></div>
+          <h4>Modern tools, responsibly used</h4>
+          <p>We use modern tools — including AI where appropriate — to speed up analysis, documentation, and implementation, without compromising ethics or confidentiality.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section team" id="team" aria-label="Our team">
+  <div class="container">
+    <div class="sh-c rv">
+      <span class="lbl">The Team</span>
+      <div class="hr"></div>
+      <h2 class="heading" style="margin-top:.75rem">Four co-founders.<br><em>One team.</em></h2>
+      <p class="body" style="margin-top:.75rem">Third-year Economics students at Toronto Metropolitan University with a shared commitment to rigorous, practical work.</p>
+    </div>
+    <div class="team-grid">
+      <div class="tc rv d1">
+        <!-- PHOTO: replace src with Naman's photo URL or relative path e.g. src="photos/naman.jpg" -->
+        <div class="tc__avatar">
+          <img src="" alt="Naman Singh" class="tc__photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="tc__mono" aria-hidden="true">NS</div>
+        </div>
+        <h3>Naman Singh</h3>
+        <div class="tc__role">Co-Founder<br>Market &amp; Financial Analysis</div>
+        <p class="tc__str">Anchors the quantitative work — market sizing, financial modeling, and the numbers-driven analysis that makes our recommendations defensible.</p>
+        <div class="tc__li"><a href="https://www.linkedin.com/in/naman-singh-intern/" target="_blank" rel="noopener" aria-label="Naman on LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>LinkedIn</a></div>
+      </div>
+      <div class="tc rv d2">
+        <!-- PHOTO: replace src with Gabriella's photo URL or relative path e.g. src="photos/gabriella.jpg" -->
+        <div class="tc__avatar">
+          <img src="" alt="Gabriella Cherepaha" class="tc__photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="tc__mono" aria-hidden="true">GC</div>
+        </div>
+        <h3>Gabriella Cherepaha</h3>
+        <div class="tc__role">Co-Founder<br>Client Solutions &amp; Program Design</div>
+        <p class="tc__str">Leads client relationships and designs tailored programs that match the specific needs and resource constraints of each business we work with.</p>
+        <div class="tc__li"><a href="https://www.linkedin.com/in/gabriella-cherepaha/" target="_blank" rel="noopener" aria-label="Gabriella on LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>LinkedIn</a></div>
+      </div>
+      <div class="tc rv d3">
+        <!-- PHOTO: replace src with Daksh's photo URL or relative path e.g. src="photos/daksh.jpg" -->
+        <div class="tc__avatar">
+          <img src="" alt="Daksh Badwal" class="tc__photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="tc__mono" aria-hidden="true">DB</div>
+        </div>
+        <h3>Daksh Badwal</h3>
+        <div class="tc__role">Co-Founder<br>Research &amp; Operations Transformation</div>
+        <p class="tc__str">Drives the research process and identifies operational improvements — turning data and field observations into structured, actionable findings.</p>
+        <div class="tc__li"><a href="https://www.linkedin.com/in/daksh-badwal/" target="_blank" rel="noopener" aria-label="Daksh on LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>LinkedIn</a></div>
+      </div>
+      <div class="tc rv d4">
+        <!-- PHOTO: replace src with Philemon's photo URL or relative path e.g. src="photos/philemon.jpg" -->
+        <div class="tc__avatar">
+          <img src="" alt="Philemon Ephraim" class="tc__photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="tc__mono" aria-hidden="true">PE</div>
+        </div>
+        <h3>Philemon Ephraim</h3>
+        <div class="tc__role">Co-Founder<br>Strategy &amp; Implementation</div>
+        <p class="tc__str">Translates analysis into clear strategic priorities and helps clients build momentum through structured, sequenced implementation plans.</p>
+        <div class="tc__li"><a href="https://www.linkedin.com/in/phili-ephraim/" target="_blank" rel="noopener" aria-label="Philemon on LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>LinkedIn</a></div>
+      </div>
+    </div>
+    <div class="team-shared rv">
+      <div class="team-shared__lbl">Shared Capabilities</div>
+      <p>All co-founders conduct <strong>quantitative research, empirical analysis, and time-series analysis</strong>, and collaborate across problem structuring, client presentations, and implementation recommendations.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="section proof" id="proof" aria-label="Work and case studies">
+  <div class="container">
+    <div class="sh-l rv" style="margin-bottom:2rem">
+      <span class="lbl">Our Work</span>
+      <div class="hr"></div>
+      <h2 class="heading" style="margin-top:.75rem">Pilot projects &amp;<br><em>case studies coming soon.</em></h2>
+    </div>
+    <div class="proof-note rv">We're a new firm. We'd rather be honest about that than show you testimonials we didn't earn. We can share anonymized examples of our analytical work on request — just ask.</div>
+    <div class="proof-grid">
+      <article class="cc rv d1">
+        <div class="cc__rule" aria-hidden="true"></div>
+        <span class="cc__badge">Retail · Coming soon</span>
+        <h3>Pricing Review for a Local Retailer</h3>
+        <p>A sample engagement focused on margin analysis, competitive benchmarking, and pricing structure recommendations for an independent retailer.</p>
+        <div class="cc__bw" aria-hidden="true">
+          <div class="cc__bt">Found margin leakage of ~12% in two product lines. Recommended tiered pricing model with projected +8% gross margin improvement. Full unit economics breakdown and sensitivity analysis included.</div>
+          <div class="cc__bl">Available on request</div>
+        </div>
+      </article>
+      <article class="cc rv d2">
+        <div class="cc__rule" aria-hidden="true"></div>
+        <span class="cc__badge">Service business · Coming soon</span>
+        <h3>10-Day Diagnostic for a Service SME</h3>
+        <p>A diagnostic covering operations, client acquisition funnel, and service delivery efficiency — with a five-point action roadmap delivered in nine business days.</p>
+        <div class="cc__bw" aria-hidden="true">
+          <div class="cc__bt">Identified two high-leverage operational changes and one pricing adjustment. Findings memo: 8 pages. Delivered in 9 business days. Follow-up call confirmed implementation progress.</div>
+          <div class="cc__bl">Available on request</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq" aria-label="Frequently asked questions">
+  <div class="container">
+    <div class="faq__in">
+      <div class="faq__left rv">
+        <span class="lbl">FAQ</span>
+        <div class="hr"></div>
+        <h2 class="heading" style="margin-top:.75rem">Common<br><em>questions.</em></h2>
+      </div>
+      <div class="faq-list rv d1" role="list">
+        <div class="fi" role="listitem">
+          <button class="fi__q" aria-expanded="false">Who do you work with?<svg class="fi__ico" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></button>
+          <div class="fi__a"><p>Small and growing businesses — typically founders or operators with 1–30 employees who need structured analysis or a clear strategic plan. We're most useful when you have a specific question to answer or a decision to make, and you want someone to do the rigorous work of figuring it out.</p></div>
+        </div>
+        <div class="fi" role="listitem">
+          <button class="fi__q" aria-expanded="false">What does a Business Diagnostic include?<svg class="fi__ico" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></button>
+          <div class="fi__a"><p>An intake session, document and data review (whatever you can share), research and analysis by our team, and a written findings report with a prioritized action roadmap. We finish with a 60-minute walkthrough call. Exact scope is confirmed upfront before any engagement starts.</p></div>
+        </div>
+        <div class="fi" role="listitem">
+          <button class="fi__q" aria-expanded="false">How much time does this take on my end?<svg class="fi__ico" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></button>
+          <div class="fi__a"><p>We keep it light. Most engagements need 2–3 hours of your time total: an intake call, sharing relevant documents, and a final review call. We do the heavy lifting in between. If we need more from you, we'll flag it before the engagement starts.</p></div>
+        </div>
+        <div class="fi" role="listitem">
+          <button class="fi__q" aria-expanded="false">Is this really free? What's the catch?<svg class="fi__ico" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></button>
+          <div class="fi__a"><p>Yes, genuinely free. We're seeking practical experience working with real businesses — that's the exchange. You get rigorous consulting work; we get the applied experience of actually doing it. No hidden fees, no upsells. The only thing we might ask for is permission to reference the project anonymously down the line.</p></div>
+        </div>
+        <div class="fi" role="listitem">
+          <button class="fi__q" aria-expanded="false">Do you work in-person or remotely?<svg class="fi__ico" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></button>
+          <div class="fi__a"><p>We're based in Toronto, ON, and can meet in-person for Toronto-area clients when it makes sense. Most of our work is remote — calls, shared documents, and written deliverables — and that works well for all of our engagements.</p></div>
+        </div>
+        <div class="fi" role="listitem">
+          <button class="fi__q" aria-expanded="false">How do you handle confidential information?<svg class="fi__ico" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></button>
+          <div class="fi__a"><p>We treat everything you share as confidential. We're happy to sign a mutual NDA before any engagement begins — just ask. We don't share client information or use your data for any purpose outside of the agreed engagement.</p></div>
+        </div>
+        <div class="fi" role="listitem">
+          <button class="fi__q" aria-expanded="false">You're students — what's your actual experience?<svg class="fi__ico" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></button>
+          <div class="fi__a"><p>Yes — we're four third-year Economics students at TMU. We don't claim decades of corporate experience. What we have: strong analytical training, a rigorous approach, and a lot of drive. We're honest about what we know and what we don't. If a project is outside our scope, we'll say so upfront.</p></div>
+        </div>
+        <div class="fi" role="listitem">
+          <button class="fi__q" aria-expanded="false">Do you implement AI? What does that mean?<svg class="fi__ico" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></button>
+          <div class="fi__a"><p>When we say "AI-enabled," we mean workflow automation and reporting using practical, off-the-shelf tools — not custom model training or ML engineering. Before recommending anything, we assess whether it's actually worth doing (readiness + ROI first). All AI work is fixed-scope and piloted at small scale. You retain full control over your data and processes, and we hand everything off with documentation your team can maintain.</p></div>
+        </div>
+        <div class="fi" role="listitem">
+          <button class="fi__q" aria-expanded="false">What about data privacy and confidentiality?<svg class="fi__ico" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></button>
+          <div class="fi__a"><p>We take this seriously. We're happy to sign a mutual NDA before any engagement begins. We minimize the sensitive data we touch, use least-privilege sharing (only what's needed for the task), and never reuse client data outside the agreed engagement. For any AI-enabled work, we'll walk you through plain-English best practices so you know exactly what's happening with your information.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact" aria-label="Contact us">
+  <div class="container">
+    <div class="contact__in">
+      <div class="contact__left rv">
+        <span class="lbl">Get in Touch</span>
+        <div class="hr"></div>
+        <h2 class="heading" style="margin-top:.75rem">Let's talk about<br><em>your business.</em></h2>
+        <p class="body" style="margin-top:1rem">Start with a 15-minute intro call. No prep needed — just tell us what's on your plate and we'll figure out together if we can help.</p>
+        <div class="contact-info">
+          <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg><a href="/cdn-cgi/l/email-protection#a7cfc2cbcbc8e7c9c0c3d7c6c3d1ced4c8d5de89c4c8ca"><span class="__cf_email__" data-cfemail="1c74797070735c727b786c7d786a756f736e65327f7371">[email&#160;protected]</span></a></div>
+          <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.29 6.29l1.42-1.42a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><a href="tel:+16470000000">+1 (647) 000-0000</a></div>
+          <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Toronto, ON — Remote available</div>
+        </div>
+        <div class="contact__btns">
+          <a href="https://calendly.com/yourlink" target="_blank" rel="noopener" class="btn btn-w">Book a 15-min intro call</a>
+          <a href="/cdn-cgi/l/email-protection#452d2029292a052b2221352421332c362a373c6b262a28" class="btn btn-g">Email us directly</a>
+        </div>
+      </div>
+      <div class="cform rv d1">
+        <div class="cform__title">Send us a message</div>
+        <!-- Replace action below with: action="https://formspree.io/f/YOUR_FORM_ID" method="POST" -->
+        <form action="mailto:ngdpadvisory@gmail.com" method="post" enctype="text/plain" novalidate>
+          <div class="frow">
+            <div class="fg"><label for="name">Your name</label><input type="text" id="name" name="name" placeholder="Jane Smith" required autocomplete="name"/></div>
+            <div class="fg"><label for="email">Email address</label><input type="email" id="email" name="email" placeholder="jane@company.com" required autocomplete="email"/></div>
+          </div>
+          <div class="fg"><label for="biz">Business / company</label><input type="text" id="biz" name="business" placeholder="Your business name" autocomplete="organization"/></div>
+          <div class="fg"><label for="msg">What's on your mind?</label><textarea id="msg" name="message" placeholder="Tell us about your business and what you're working on..." required></textarea></div>
+          <button type="submit" class="btn btn-w fsub">Send message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__in">
+      <div class="flogo">
+        <div class="fmark" aria-hidden="true"><span>NGDP</span></div>
+        <span class="fname">NGDP Advisory</span>
+      </div>
+      <p class="fcopy">© 2025 NGDP Advisory. All rights reserved.</p>
+      <div class="fright">
+        <span class="floc">Toronto, ON</span>
+        <div class="fli"><a href="https://www.linkedin.com/company/ngdp-advisory/" target="_blank" rel="noopener" aria-label="NGDP Advisory on LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>LinkedIn</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav
+  const ham=document.getElementById('ham'),mob=document.getElementById('mob');
+  ham.addEventListener('click',()=>{const o=mob.classList.toggle('open');ham.setAttribute('aria-expanded',o)});
+  mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mob.classList.remove('open');ham.setAttribute('aria-expanded','false')}));
+
+  // Scroll reveal
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -28px 0px'});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+  // FAQ
+  document.querySelectorAll('.fi__q').forEach(b=>{b.addEventListener('click',()=>{const fi=b.closest('.fi'),o=fi.classList.toggle('open');b.setAttribute('aria-expanded',o)})});
+
+  // Team photo fallback — show initials monogram if photo src is empty or fails to load
+  document.querySelectorAll('.tc__photo').forEach(img=>{
+    const mono=img.nextElementSibling;
+    const showMono=()=>{img.style.display='none';mono.style.display='flex'};
+    if(!img.getAttribute('src')||img.getAttribute('src')===''){showMono();}
+    else{img.onerror=showMono;}
+  });
+</script>
+</body>
+</html>
